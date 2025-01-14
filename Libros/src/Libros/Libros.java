@@ -6,5 +6,4 @@ public class Libros {
 	int id;
 	int añoPublicacion;
 	int copiasDisponibles;
-	
 }

@@ -14,4 +14,7 @@ public class Libros {
 		this.añoPublicacion = ap;
 		this.copiasDisponibles = cd;
 	}
+	public void consultarLibro(Libros libro) {
+		System.out.println("Titulo: " + titulo + " Autor: " + autor + " ID: " + " Año de publicación " + añoPublicacion + "Copias disponibles: " + copiasDisponibles);
+	}
 }

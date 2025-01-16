@@ -1,5 +1,6 @@
 package sesion;
 
+	//Atributos//
 public class Reserva {
     private int idReserva;
     private String usuario;
@@ -25,9 +26,11 @@ public class Reserva {
 	public void liberarReserva() {
 		System.out.print("La reserva "+idReserva+" del usuario "+usuario+" ha sido liberada.");
 	}
+	 //get IdReserva//
 	public int getIdReserva() {
 		return idReserva;
 	}
+	//set IdReserva//
 	public void setIdReserva(int idReserva) {
 		this.idReserva = idReserva;
 	}

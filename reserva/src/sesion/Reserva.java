@@ -1,0 +1,21 @@
+package sesion;
+
+public class Reserva {
+    private static int contadorReservas = 0;
+    private int idReserva;
+    private String usuario;
+    private String libro;
+    private String fechaReserva;
+  
+    //constructor//
+    public Reserva(int idReserva,String usuario,String libro,String fechaReserva) {
+        this.idReserva = idReserva;
+        this.usuario = usuario;
+        this.libro = libro;
+        this.fechaReserva = fechaReserva;
+    }
+    //Metodo para crear una reserva//
+    public void crearReserva() {
+    	System.out.println("Reserva creada "+idReserva+" por el usuario "+usuario+" para el libro "+libro+" en la fecha "+fechaReserva);
+    }
+}

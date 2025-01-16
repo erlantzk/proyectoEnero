@@ -1,11 +1,13 @@
 package Libros;
 
+
 public class Libros {
 	String titulo;
 	String autor;
 	int id;
 	int añoPublicacion;
 	int copiasDisponibles;
+	reserva [] listaDeReserva;
 	
 	public Libros (String t, String a, int i, int ap, int cd) {
 		this.titulo = t;
@@ -24,6 +26,7 @@ public class Libros {
 			System.out.println(contador.titulo);
 		}
 	}
+	
 	
 	
 }

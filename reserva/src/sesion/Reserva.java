@@ -19,7 +19,6 @@ public class Reserva {
     }
     //metodo lista de reservas//
 	public void ListarReservas() {
-	System.out.print("idReserva:"+idReserva+" Usuario:"+usuario+" Libro:"+libro+" Fecha de reserva:"+fechaReserva);
-		
+	System.out.print("idReserva:"+idReserva+" Usuario:"+usuario+" Libro:"+libro+" Fecha de reserva:"+fechaReserva); 
 	}
 }

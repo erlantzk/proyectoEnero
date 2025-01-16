@@ -25,6 +25,6 @@ public class usuario {
     		System.out.println(contador.nombre);
     	}
     }
-    
+     
 }
 

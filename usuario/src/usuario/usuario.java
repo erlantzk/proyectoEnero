@@ -17,5 +17,8 @@ public class usuario {
         this.nombre = nombre;
         this.ID = ID;
     }
+    public void registrarUsuario (usuario Usuario, usuario ID) {
+    	System.out.println("Nombre "+ nombre + "ID" + ID );
+    }
 }
 

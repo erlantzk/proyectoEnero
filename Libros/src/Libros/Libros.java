@@ -15,7 +15,7 @@ public class Libros {
 		this.copiasDisponibles = cd;
 	}
 	
-	public void consultarLibro(Libros libro) {
+	public void consultarLibro(Libros libro, Libros id) {
 		System.out.println("Titulo: " + titulo + " Autor: " + autor + " ID: " + " Año de publicación " + añoPublicacion + "Copias disponibles: " + copiasDisponibles);
 	}
 	

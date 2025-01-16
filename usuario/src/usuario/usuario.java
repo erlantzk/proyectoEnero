@@ -20,5 +20,11 @@ public class usuario {
     public void registrarUsuario (usuario Usuario, usuario ID) {
     	System.out.println("Nombre "+ nombre + "ID" + ID );
     }
+    public void listarUsuario (usuario [] Usuario) {
+    	for(usuario contador:Usuario) {
+    		System.out.println(contador.nombre);
+    	}
+    }
+    
 }
 

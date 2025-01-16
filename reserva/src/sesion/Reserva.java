@@ -21,4 +21,8 @@ public class Reserva {
 	public void ListarReservas() {
 	System.out.print("idReserva:"+idReserva+" Usuario:"+usuario+" Libro:"+libro+" Fecha de reserva:"+fechaReserva); 
 	}
+	//metodo liberar reserva//
+	public void liberarReserva() {
+		System.out.print("La reserva "+idReserva+" del usuario "+usuario+" ha sido liberada");
+	}
 }

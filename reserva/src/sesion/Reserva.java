@@ -1,7 +1,6 @@
 package sesion;
 
 public class Reserva {
-    private static int contadorReservas = 0;
     private int idReserva;
     private String usuario;
     private String libro;
@@ -18,4 +17,9 @@ public class Reserva {
     public void crearReserva() {
     	System.out.println("Reserva creada "+idReserva+" por el usuario "+usuario+" para el libro "+libro+" en la fecha "+fechaReserva);
     }
+    //metodo lista de reservas//
+	public void ListarReservas() {
+	System.out.print("idReserva:"+idReserva+" Usuario:"+usuario+" Libro:"+libro+" Fecha de reserva:"+fechaReserva);
+		
+	}
 }

@@ -1,4 +1,4 @@
-package Libros;
+package prueba;
 
 import java.util.ArrayList;
 
@@ -34,11 +34,26 @@ public class Libros {
         if (copiasDisponibles > 0) {
             copiasDisponibles--; 
             listaDeReservas.add(nuevaReserva);
-            System.out.println("Reserva añadida con éxito para el libro: " + titulo);
+            System.out.println("Reserva añadida para el libro: " + titulo);
             return true;
         } else {
             System.out.println("No hay copias disponibles para reservar el libro: " + titulo);
             return false;
         }
     }
+    
+    public boolean eliminarReserva(int idReserva) {
+        for (int i = 0; i < listaDeReservas.size(); i++) {
+            if (listaDeReservas.get(i).getIdReserva() == idReserva) {
+                listaDeReservas.remove(i);
+                copiasDisponibles++;
+                System.out.println("Reserva " + idReserva + " eliminada.");
+                return true;
+            }
+        }
+        System.out.println("No se hay reserva de " + idReserva);
+        return false;
+    }
+
+
 }

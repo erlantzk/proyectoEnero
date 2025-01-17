@@ -1,28 +1,52 @@
 # proyectoEnero DOCUMENTACIÓN SOBRE LAS CLASES UTILIZADOS (Eneritz, Iker, Erlantz, Illart).
+
 /Clase usuario/
-La clase usuario está contenida en el paquete usuario. 
+Este código es una clase llamada usuario que representa a un usuario de un sistema, probablemente relacionado con una biblioteca, donde los usuarios pueden realizar préstamos de libros. Vamos a desglosarlo por partes:
+
 Atributos:
-nombre: Almacena el nombre del usuario como un texto.
-ID: Un número entero para identificar al usuario.
-rol: Un array de String que define posibles roles de un usuario, como "estudiante", "profesor" e "invitado". Tiene espacio para exactamente 3 elementos.
+nombre: Almacena el nombre del usuario.
+id: Almacena el ID único del usuario.
+rol: Almacena el rol del usuario (por ejemplo, "estudiante", "profesor", "invitado").
+librosPrestados: Una lista que contiene los libros que el usuario ha prestado.
 Constructores:
-public usuario() {
-    rol[0] = "estudiante";
-    rol[1] = "profesor";
-    rol[2] = "invitado";
-}
-Este constructor asigna valores predeterminados al array rol. Si creas un objeto usuario sin pasar parámetros, este constructor será invocado automáticamente
-Constructor parametrizado:
-public usuario(String nombre, int ID) {
-    this();
-    this.nombre = nombre;
-    this.ID = ID;
-}
-Este constructor permite inicializar un objeto con un nombre y un ID.
-La línea this(); llama al constructor por defecto antes de continuar, asegurando que el array rol también sea inicializado.
-Métodos:
--registrarUsuario
--listarUsuario:Este método toma un array de objetos usuario como argumento.Itera sobre el array utilizando un bucle for-each y muestra los nombres de todos los usuarios en la consola.
+Constructor por defecto:
+
+Inicializa la lista librosPrestados como una lista vacía (new ArrayList<>()).
+Constructor con parámetros:
+
+Llama al constructor por defecto para inicializar la lista de libros prestados.
+Recibe tres parámetros (nombre, id, rol) y los asigna a las variables correspondientes de la clase.
+Métodos Getter y Setter:
+Estos métodos permiten acceder y modificar los valores de los atributos de la clase.
+
+getNombre() y setNombre(String nombre) permiten obtener y establecer el nombre del usuario.
+getId() y setId(int id) permiten obtener y establecer el ID del usuario.
+getRol() y setRol(String rol) permiten obtener y establecer el rol del usuario.
+getLibrosPrestados() permite obtener la lista de libros prestados por el usuario.
+Método puedeRealizarPrestamo():
+Este método verifica si el usuario puede realizar un préstamo de un libro, basándose en el límite de préstamos que depende de su rol. Este límite se obtiene a través del método obtenerLimitePrestamosPorRol().
+
+Método obtenerLimitePrestamosPorRol():
+Este método devuelve el límite de libros que un usuario puede prestar según su rol:
+
+"estudiante" puede tener hasta 3 libros.
+"profesor" puede tener hasta 5 libros.
+"invitado" puede tener solo 1 libro.
+Si el rol no está definido, devuelve 0.
+Métodos para añadir y remover libros prestados:
+añadirLibroPrestado(Libro libro):
+
+Si el usuario puede realizar un préstamo (es decir, no ha alcanzado el límite), agrega el libro a la lista librosPrestados y muestra un mensaje indicando que el libro fue añadido.
+Si el usuario ya ha alcanzado el límite de libros prestados, muestra un mensaje indicando que no se pueden añadir más libros.
+removerLibroPrestado(Libro libro):
+
+Si el libro está en la lista de librosPrestados, lo elimina y muestra un mensaje indicando que el libro fue devuelto.
+Si el libro no estaba en la lista de libros prestados, muestra un mensaje indicando que el libro no estaba en la lista.
+Método registrarUsuario():
+Este método simplemente imprime un mensaje que indica que el usuario ha sido registrado, mostrando su nombre y ID.
+
+Método listarUsuarios():
+Este método recibe un arreglo de usuarios y los lista imprimiendo su nombre, ID y rol.
 /Clase usuario/
 
 /Clase Libros/

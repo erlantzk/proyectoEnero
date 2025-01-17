@@ -2,6 +2,8 @@ package prueba;
 
 import java.util.ArrayList;
 
+import prueba.Libros;
+
 public class Libros {
     String titulo;
     String autor;
@@ -24,9 +26,9 @@ public class Libros {
                 " | Año de publicación: " + añoPublicacion + " | Copias disponibles: " + copiasDisponibles);
     }
 
-    public void listarLibros(Libros[] libros) {
+    public static void listarLibros(Libros[] libros) {
         for (Libros libro : libros) {
-            System.out.println(libro.titulo);
+            System.out.println("Titulo: " + libro.titulo);
         }
     }
 

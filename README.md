@@ -1,4 +1,4 @@
-# proyectoEnero
+# proyectoEnero DOCUMENTACIÓN SOBRE LAS CLASES UTILIZADOS (Eneritz, Iker, Erlantz, Illart).
 /Clase usuario/
 La clase usuario está contenida en el paquete usuario. 
 Atributos:

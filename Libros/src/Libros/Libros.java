@@ -68,6 +68,10 @@ public class Libros {
             System.out.println("No hay más copias disponibles para reducir.");
         }
     }
+    
+    public void aumentarCopiasDisponibles() {
+        copiasDisponibles++;
+    }
 
 
 }

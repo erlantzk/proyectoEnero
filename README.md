@@ -63,6 +63,14 @@ listarLibros sirve para mostrar el titulo de los libros dentro de un array de li
 añadirReserva sirve para añadir una reserva sobre un libro y muestra si esta disponible o no.
 
 eliminarReserva sirve para eliminar una reserva previamente creada y si no hay reserva con ese id se muestra por pantalla.
+
+hayCopiasDisponibles verifica si quedan copias disponibles de un libro en concreto.
+
+reducirCopiasDisponibles reduce las copias disponibles de un libro.
+
+aumentarCopiasDisponibles aumenta las copias disponibles de un libro.
+
+Por ultimo añadir getter y setter del atributo titulo.
 /Clase Libros/
 
 /Clase prestamo/

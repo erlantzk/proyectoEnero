@@ -1,5 +1,5 @@
 # proyectoEnero DOCUMENTACIÓN SOBRE LAS CLASES UTILIZADOS (Eneritz, Iker, Erlantz, Illart).
-
+Los commit de cada clase estan en los branch.
 /Clase usuario/
 Este código es una clase llamada usuario que representa a un usuario de un sistema, probablemente relacionado con una biblioteca, donde los usuarios pueden realizar préstamos de libros. Vamos a desglosarlo por partes:
 

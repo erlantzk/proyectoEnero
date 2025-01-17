@@ -1,7 +1,5 @@
 package programa;
 
-package prueba;
-
 public class Libros {
     String titulo;
     String autor;

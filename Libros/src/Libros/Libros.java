@@ -56,6 +56,18 @@ public class Libros {
         System.out.println("No se hay reserva de " + idReserva);
         return false;
     }
+    
+    public boolean hayCopiasDisponibles() {
+        return copiasDisponibles > 0;
+    }
+    
+    public void reducirCopiasDisponibles() {
+        if (hayCopiasDisponibles()) {
+            copiasDisponibles--;
+        } else {
+            System.out.println("No hay más copias disponibles para reducir.");
+        }
+    }
 
 
 }

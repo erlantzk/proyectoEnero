@@ -142,3 +142,64 @@ removerLibroPrestado(Libro libro): Elimina un libro de la lista de libros presta
 /Clase prestamo/
 
 
+/Clase reserva/
+
+ATRIBUTO
+public class reserva {
+private int idReserva;
+private usuario usuario;
+private Libros libro;
+private String fechaReserva;
+
+idReserva: Un entero que identifica de manera única la reserva.
+usuario: Un objeto de la clase usuario (probablemente definida en otro lugar del código), que representa al usuario que hace la reserva.
+libro: Un objeto de la clase Libros (también definida en otro lugar del código), que representa el libro que se va a reservar.
+fechaReserva: Una cadena de texto (String) que contiene la fecha en la que se realiza la reserva.
+
+
+CONSTRUCTOR
+public reserva(int idReserva, usuario usuario, Libros libro, String fechaReserva) {
+    this.idReserva = idReserva;
+    this.usuario = usuario;
+    this.libro = libro;
+    this.fechaReserva = fechaReserva;
+}
+Este es el constructor de la clase reserva. Un constructor es un método especial que se ejecuta cuando se crea una nueva instancia (objeto) de la clase.
+Este constructor toma cuatro parámetros (idReserva, usuario, libro, fechaReserva) y los asigna a los atributos de la clase.
+
+CREAR RESERVA
+
+public void crearReserva() {
+    System.out.println("Reserva creada " + idReserva + " por el usuario " + usuario + " para el libro " + libro + " en la fecha " + fechaReserva + ".");
+}
+Este método imprime un mensaje en la consola indicando que se ha creado una reserva, mostrando información sobre el idReserva, el usuario, el libro y la fechaReserva.
+Es importante destacar que en el mensaje, los objetos usuario y libro se imprimen directamente, lo cual podría no ser muy informativo si las clases usuario y Libros no sobrescriben el método toString() para mostrar información detallada. Si no se hace, Java simplemente imprimirá la referencia del objeto (su dirección de memoria).
+
+LISTAR RESERVAS
+
+public void ListarReservas() {
+    System.out.print("ID de Reserva:" + idReserva + " Usuario:" + usuario + " Libro:" + libro + " Fecha de reserva:" + fechaReserva + ".");
+}
+Este método imprime en la consola la información de la reserva de una forma estructurada: ID de Reserva, Usuario, Libro, y Fecha de reserva.
+Similar al método anterior, si las clases usuario y Libros no sobrescriben toString(), esto podría no ser muy legible.
+
+LIBERAR RESERVA
+
+
+public void liberarReserva() {
+    System.out.print("La reserva " + idReserva + " del usuario " + usuario + " ha sido liberada.");
+}
+Este método imprime un mensaje indicando que la reserva ha sido liberada, es decir, que ya no está vigente o se ha cancelado.
+
+GET Y SET
+
+public int getIdReserva() {
+    return idReserva;
+}
+
+public void setIdReserva(int idReserva) {
+    this.idReserva = idReserva;
+}
+Estos son los métodos getter y setter para el atributo idReserva.
+getIdReserva(): Devuelve el valor de idReserva.
+setIdReserva(int idReserva): Establece el valor del atributo idReserva.

@@ -24,3 +24,18 @@ Métodos:
 -registrarUsuario
 -listarUsuario:Este método toma un array de objetos usuario como argumento.Itera sobre el array utilizando un bucle for-each y muestra los nombres de todos los usuarios en la consola.
 
+/Clase Libros/
+Lo primero es crear los atributos de la clase Libros que son, el nombre del libro, su autor, un id único que sirve de identificativo para el libro, el año de publicación del libro, las copias disponibles  en la blibioteca y un array de la clase reserva que sirve como lista de reserva.
+
+Después he creado el constructor que sirve para guardar los datos de los libros.
+
+Luego he creado los métodos que son:
+
+consultarLibros que sirve para mostrar por pantalla todos los datos de cada libro.
+
+listarLibros sirve para mostrar el titulo de los libros dentro de un array de libros.
+
+añadirReserva sirve para añadir una reserva sobre un libro y muestra si esta disponible o no.
+
+eliminarReserva sirve para eliminar una reserva previamente creada y si no hay reserva con ese id se muestra por pantalla.
+/Clase Libros/

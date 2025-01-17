@@ -107,3 +107,4 @@ Métodos esperados:
 puedeRealizarPrestamo(): Verifica si el usuario tiene permitido realizar más préstamos.
 añadirLibroPrestado(Libro libro): Registra un libro como prestado al usuario.
 removerLibroPrestado(Libro libro): Elimina un libro de la lista de libros prestados por el usuario.
+/Clase prestamo/

@@ -1,8 +1,7 @@
 package prueba;
 
-import java.util.ArrayList;
-
 import prueba.Libros;
+import prueba.reserva;
 
 public class Libros {
     String titulo;
@@ -10,7 +9,8 @@ public class Libros {
     int id;
     int añoPublicacion;
     int copiasDisponibles;
-    ArrayList<reserva> listaDeReservas;
+    reserva[] reservas; 
+    int contador;
 
     public Libros(String t, String a, int i, int ap, int cd) {
         this.titulo = t;
@@ -18,7 +18,8 @@ public class Libros {
         this.id = i;
         this.añoPublicacion = ap;
         this.copiasDisponibles = cd;
-        this.listaDeReservas = new ArrayList<>();
+        this.reservas = new reserva[10];
+        this.contador = 0; 
     }
 
     public void consultarLibro() {
@@ -34,20 +35,26 @@ public class Libros {
 
     public boolean añadirReserva(reserva nuevaReserva) {
         if (copiasDisponibles > 0) {
-            copiasDisponibles--; 
-            listaDeReservas.add(nuevaReserva);
-            System.out.println("Reserva añadida para el libro: " + titulo);
-            return true;
+            copiasDisponibles--;
+            if (contador < reservas.length) {
+                reservas[contador] = nuevaReserva;
+                contador++;
+                System.out.println("Reserva añadida con éxito para el libro: " + titulo);
+                return true;
+            } else {
+                System.out.println("No hay espacio suficiente en el array para más reservas.");
+                return false;
+            }
         } else {
             System.out.println("No hay copias disponibles para reservar el libro: " + titulo);
             return false;
         }
     }
-    
+
     public boolean eliminarReserva(int idReserva) {
-        for (int i = 0; i < listaDeReservas.size(); i++) {
-            if (listaDeReservas.get(i).getIdReserva() == idReserva) {
-                listaDeReservas.remove(i);
+        for (int i = 0; i < contador; i++) {
+            if (reservas[i] != null && reservas[i].getIdReserva() == idReserva) {
+                reservas[i] = null;
                 copiasDisponibles++;
                 System.out.println("Reserva " + idReserva + " eliminada.");
                 return true;
@@ -60,7 +67,7 @@ public class Libros {
     public boolean hayCopiasDisponibles() {
         return copiasDisponibles > 0;
     }
-    
+
     public void reducirCopiasDisponibles() {
         if (hayCopiasDisponibles()) {
             copiasDisponibles--;
@@ -68,10 +75,16 @@ public class Libros {
             System.out.println("No hay más copias disponibles para reducir.");
         }
     }
-    
+
     public void aumentarCopiasDisponibles() {
         copiasDisponibles++;
     }
 
+    public String getTitulo() {
+        return titulo;
+    }
 
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
 }

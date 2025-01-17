@@ -83,11 +83,11 @@ public class usuario {
 	        }
 	    }
 
-	    public void registrarUsuario(Usuario usuario) {
+	    public void registrarUsuario(usuario usuario) {
 	        System.out.println("Usuario registrado: Nombre - " + usuario.getNombre() + ", ID - " + usuario.getId());
 	    }
 
-	    public static void listarUsuarios(Usuario[] usuarios) {
+	    public static void listarUsuarios(usuario[] usuarios) {
 	        for (usuario usuario : usuarios) {
 	            System.out.println("Nombre: " + usuario.getNombre() + ", ID: " + usuario.getId() + ", Rol: " + usuario.getRol());
 	        }
